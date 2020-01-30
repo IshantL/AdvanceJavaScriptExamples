@@ -56,3 +56,11 @@ let name6 = {
 
 printFullNameMul.call(name5,"Delhi","India");
 printFullNameMul.apply(name4, ["California", "US"]);
+
+
+//Bind
+//The difference between call and bind is bind is giving a copy of a function which is invoke later.
+
+let printUsingBind = printFullNameMul.bind(name5,"Delhi","India");
+console.log("printUsingBind:: ",printUsingBind);
+printUsingBind();
