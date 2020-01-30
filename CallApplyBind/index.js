@@ -36,3 +36,23 @@ let printFullName = function(){
 
 printFullName.call(name3);
 printFullName.call(name4);
+
+//if multiple arguments- using call and apply
+
+let printFullNameMul = function(hometown, country){
+    console.log(this.firstname + " "+ this.lastname +" "+ hometown + " "+ country);
+}
+   
+let name5 ={
+    firstname: "Ishant",
+    lastname: "Lambhate",
+}
+
+let name6 = {
+    firstname: "Elon",
+    lastname: "Musk"
+}
+
+
+printFullNameMul.call(name5,"Delhi","India");
+printFullNameMul.apply(name4, ["California", "US"]);
